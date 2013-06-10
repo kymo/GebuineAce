@@ -1,0 +1,44 @@
+
+<html>
+<head>
+
+<title>
+{% block  title %}
+{% endblock %}
+</title>
+
+<style>
+#top
+{
+        
+}
+li{
+display:inline;
+}
+</style>
+</head>
+<body>
+
+
+<div id = 'main'>
+    <div id = 'top'>
+        GenuineAce
+        <li> Docs </li>
+        <li> Page </li>
+
+    </div>
+
+    <div id = 'center'>
+    {% block center %}
+    {% endblock %}
+    </div>
+    
+    <div id = 'footer'>
+    {% block footer %}
+    {% endblock %}
+    </div>
+</div>
+
+
+</body>
+

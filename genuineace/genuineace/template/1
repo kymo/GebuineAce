@@ -1,0 +1,45 @@
+
+
+<html>
+<head>
+<script src = '/site_media/jquery.js'></script>
+<style>
+#login_form
+{
+width:400px;
+height:500px;
+}
+input
+{
+    border:1px solid #eee ;
+    width: 400px;
+    height:67px;
+    font-size:30px;
+    background:no-repeat;
+    
+}
+#inp
+{
+    background: url('/site_media/images/login_1.png');
+    background-repeat: no-repeat;
+    padding:2px;
+}
+</style>
+</head>
+
+<body style = 'background:#ececec;'>
+
+<div id = 'login_form'style ='margin-left:40%;margin-top:10%;border:1px solid #333;'>
+<span style="font-family:微软雅黑;font-size:28px;font-weight:bold;font-style:normal;text-decoration:none;color:#336688;">LOGIN </span>
+
+<form action = '/login/' action = 'post'>
+<div id = 'inp'>
+<input type = 'text' name = 'email'>
+</div>
+</form>
+
+</div>
+
+</body>
+
+</body>

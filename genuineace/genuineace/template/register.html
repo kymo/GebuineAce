@@ -1,0 +1,198 @@
+
+
+<html>
+<head>
+<script src = '/site_media/js/jquery.js'></script>
+<style>
+#main
+{
+width:100%;
+height:auto;
+}
+.div{border:1px solid red;}
+#center
+{
+    
+    margin:10%;
+    margin-left:20%;
+    margin-top:120px;
+    height:auto;
+    width:80%;
+
+}
+#register_form
+{
+    margin-top: 80px;
+}
+
+
+input
+{
+     width: 400px;
+     height:67px;
+     font-size:30px;
+     color:#aaa;
+     background:no-repeat;
+     border:0;
+}
+input:focus
+{
+outline:none;
+}
+ 
+.input_text
+ {
+    background: url('/site_media/images/login_1.png');
+    background-repeat: no-repeat;
+     padding: 4px;
+    padding-top:2px;
+   height:70px;
+}
+.div{border: 1px solid #fff;}
+
+#sub
+{
+    background: url('/site_media/images/login_2.png');
+    background-repeat:no-repeat;
+    width:400px;
+    height:72px;
+    padding:20px;
+    font-size:23px;
+    color:#bbb;
+    padding-left:13px;
+}
+
+
+#left
+{
+float:left;
+}
+#right
+{
+float:left;
+}
+#show_tip
+{
+    color:#336699;
+    font-size:30px;
+    font-weight:bold;
+}
+#right
+{
+margin-left:100px;
+}
+</style>
+<script>
+
+$(document).ready(
+    function()
+    {
+        $('#ids input').click(
+            function(){
+                if($(this).val() == 'Your Id')
+                $(this).val('');
+            }
+        );
+        $('#ids input').blur(
+            function(){
+                if($(this).val() == '')
+                    $(this).val("Your Id");
+            }
+        );
+        $('#email input').click(
+            function(){
+                if($(this).val() == 'Your Email')
+                $(this).val('');
+            }
+        );
+        $('#email input').blur(
+            function(){
+                if($(this).val() == '')
+                    $(this).val("Your Email");
+            }
+        );
+        $('#sub').mouseover(
+            function()
+            {
+                $(this).css('color', '#eee');
+                $(this).css('cursor', 'hand');
+                
+            }
+        );
+
+        $('#sub').mouseout(
+            function()
+            {
+                $(this).css('cursor', 'point');
+                $(this).css('color', '#bbb');
+            }
+        );
+        $('#sub').click(
+            function()
+            {
+                $('#forms').submit();
+            }
+        );
+    }
+);
+
+</script>
+</head>
+
+<body style = 'background:#ececec;'>
+
+<div class = 'font-fa' id = 'main'>
+
+<div id = 'center'>
+
+<div id = 'left'>
+    <div id = 'left_form'>
+    <span style="font-family:微软雅黑;font-size:28px;font-weight:bold;font-style:normal;text-decoration:none;color:#336688;">Sign Up For Genuine Ace</span>
+    <div id = 'register_form'>
+        <form name ='forms' id='forms' action = '/register/' method = 'POST'>
+                <input type='hidden' name="csrfmiddlewaretoken" value='{{ csrf_token }}'>
+                <div id = 'ids' class = 'input_text'>
+                    <input type = 'text' name = 'ids' value = 'Your Id'>
+                </div>
+                <div id = 'email' class = 'input_text'>
+                    <input type = 'text'  name = 'email' value = 'Your Email'>
+                </div>
+                <div id = 'psw' class = 'input_text'>
+                    <input type = 'password' name = 'password'>
+                </div>
+                <div id = 'c_psw' class = 'input_text'>
+                    <input type = 'password' name = 'password' value = 'PASSWORD'>
+                </div>
+            </form>
+
+        <div id = 'sub'>
+            <div>
+                Sigup For GenuineAce
+            </div>
+        </div>
+    </div>
+    
+    </div>
+
+</div>
+
+<div id = 'right'>
+
+    <div id = 'show_tip'>
+        <span> They Are Here </span>
+    </div>
+    <div id = 'show_person'>
+    </div>
+</div>
+<div style = 'clear:both;'></div>
+
+</div>
+
+<div id = 'footer'>
+fl
+</div>
+
+</div>
+</body>
+
+</body>

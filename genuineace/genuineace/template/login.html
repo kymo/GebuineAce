@@ -1,0 +1,161 @@
+
+
+<html>
+<head>
+<script src = '/site_media/js/jquery.js'></script>
+<style>
+#main
+{
+width:400px;
+height:auto;
+}
+
+input
+{
+    width: 400px;
+    height:67px;
+    font-size:30px;
+    color:#aaa;
+    background:no-repeat;
+    border:0;
+}
+input:focus
+{
+    outline:none;
+}
+
+.input_text
+{
+    background: url('/site_media/images/login_1.png');
+    background-repeat: no-repeat;
+    padding: 4px;
+    height:70px;
+}
+#login_form
+{
+    margin-top:100px;
+}
+.font-fa
+{
+font-family:微软雅黑,黑体;
+}
+#forget_psw a
+{
+color:#aaa;
+}
+#forget_psw a:hover
+{
+color:#000;
+}
+#forget_psw
+{
+    float:right;
+    margin-right:20px;
+}
+div
+{
+}
+#sub
+{
+    background: url('/site_media/images/login_2.png');
+    background-repeat: no-repeat;
+    margin-right:30px;
+    height:80px;
+    float:right;
+    width:250px;
+    font-size:30px;
+    color:#bbb;
+}
+</style>
+<script>
+
+$(document).ready(
+function()
+{
+    $('#login_form #inp input').click(
+        function()
+        {
+            $(this).attr('value', '');
+        }
+    );
+   
+    $('#login_form #psw_in input').click(
+        function()
+        {
+            $(this).attr('value', '');
+        }
+    );
+    $('#login_form #inp input').blur(
+        function()
+        {
+            if($(this).val() == '')
+                $(this).val('Email');
+        }
+    );
+    $('#sub div').mouseover(
+        function()
+        {
+            $(this).css('cursor', 'hand');
+            $(this).css('color', '#eee');
+        }
+    );
+    $('#sub div').mouseout(
+        function()
+        {
+            $(this).css('cursor', 'point');
+            $(this).css('color', '#bbb');
+        }
+    );
+    $('#sub div').click(
+        function()
+        {
+            $(this).css('color', '#eee;');
+            $(this).html("LOGIN..");
+            $('#forms').submit();
+        }
+    );
+}
+);
+function change_color()
+{
+    $('#forget_psw span').css('color', '#333');
+    $('#forget_psw span').css('cursor', 'hand');
+}
+function return_color()
+{
+    $('#forget_psw span').css('color', '#aaa');
+    $('#forget_psw span').css('cursor', 'point');
+}
+</script>
+</head>
+
+<body style = 'background:#ececec;'>
+
+<div class = 'font-fa' id = 'main'style ='margin-left:40%;margin-top:10%;'>
+<span style="font-family:微软雅黑,黑体;font-size:28px;font-weight:bold;font-style:normal;text-decoration:none;color:#336688;">LOGIN </span>
+
+<div id = 'login_form'>
+    <form name ='forms' id='forms' action = '/login/' method = 'POST'>
+        <input type='hidden' name="csrfmiddlewaretoken" value='{{ csrf_token }}'>
+        <div id = 'inp' class = 'input_text'>
+            <input type = 'text' name = 'email' value = 'Email'>
+        </div>
+        <div id = 'psw_in' class = 'input_text'>
+            <input type = 'password' name = 'password' value = 'PASSWORD'>
+        </div>
+    </form>
+</div>
+
+<div id = 'forget_psw'>
+    <a  href = '#' style='margin-right:30px;'>Forget Password</a>
+</div>
+
+<div id = 'sub'>
+    <div style = 'margin-left:35%;margin-top:8%;'>
+    LOGIN
+    </div>
+</div>
+</div>
+</body>
+
+</body>

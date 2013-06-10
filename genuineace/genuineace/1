@@ -1,0 +1,54 @@
+
+<html>
+<head>
+
+<style>
+#title
+{
+    font-size:30px;
+    color:#222;
+}
+#head
+{
+    width:100%;
+    height:100px;
+    margin-top: -10px;
+    margin-left: -px;
+    margin-right: -4px;
+    margin-top:200px;
+}
+#main
+{
+    margin-left:20%;
+}
+#center{
+margin-top:50px;
+}
+</style>
+</head>
+<body style='background:#ececec;'>
+<div id = 'main'>
+
+
+<div id = 'head'>
+        <div id = 'title'>
+            <span style = 'color:#999;font-size:40px;font-weight:bold;font-family:微软雅黑,黑体;'> GenuineAce</span>
+        </div>
+        <div id = 'intro'>
+            <p style = 'color:#336688;font-size:30px;width:60%;'>GeunuineAce helps you anti-counterfeid and market analysis and tracking the products' Ads</p>
+        </div>
+</div>
+
+
+<div id = 'center'>
+<p style = 'font-size:30px;color:#2f4f6f;font-weight:bold;'> They Are Here </p>
+
+</div>
+
+<div id = 'footer'>
+</div>
+
+</div>
+
+
+</body>
